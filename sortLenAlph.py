@@ -18,7 +18,7 @@ def sortText(filename):
         text.sort(key=len, reverse=False)
         return text     # Return the sorted text list
     else:
-        return "Error: no file named"+filename+"Please make sure it exists and/or is spelt correctly"
+        return "Error: no file named '"+filename+"'. Please make sure it exists and/or is spelt correctly"
 
 
 # Method to turn textfile into a list of words
