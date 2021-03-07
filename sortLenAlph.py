@@ -3,20 +3,28 @@
 # Description: A simple python program that takes in a text files of names/words and sorts them alphabetically
 # and by length
 
+import os.path
+
+
 # Method to read textfile and sort
 def sortText(filename):
-    text = getWords(filename)
-    # Sort the text alphabetically
-    text.sort()
-    # Sort the text by length in ascending order
-    text.sort(key=len, reverse=False)
-    return text     # Return the sorted text list
+    # Before we open the text file, we must first make sure it exists
+    if os.path.isfile(filename):
+        # Get the words as a list
+        text = getWords(filename)
+        # Sort the text alphabetically
+        text.sort()
+        # Sort the text by length in ascending order
+        text.sort(key=len, reverse=False)
+        return text     # Return the sorted text list
+    else:
+        return "Error: no file named"+filename+"Please make sure it exists and/or is spelt correctly"
 
 
 # Method to turn textfile into a list of words
 def getWords(filename):
     text = []   # Placeholder list to hold the words from the text file
-    # First, open the text file to be sorted
+    # Open the text file to be sorted
     with open(filename, "r") as words:
         # Add each word from the textfile into the list
         for word in words:
