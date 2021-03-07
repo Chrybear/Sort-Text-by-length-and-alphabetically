@@ -32,19 +32,19 @@ def main():
     # Loop while user gives inputs
     while True:
         # Get user input file name. Program only designed for .txt files, so must be strict with the file type
-        uInput = input("Please enter the filename of the txt file you wish to be sorted *Exclude file extension*:\n")
+        uInput = input("\nPlease enter the filename of the txt file you wish to be sorted *Exclude file extension*:")
         # Check if file exists
         if os.path.isfile(uInput+'.txt'):
             text = sortText(uInput+'.txt')  # Send file to be sorted
             print(text)  # Print out the sorted file
 
-            if input("Would you like to save the sorted file? Y/N").lower() == 'y':
+            if input("\nWould you like to save the sorted file? Y/N:").lower() == 'y':
                 with open(uInput+'_sorted.txt', 'w') as x:
                     for word in text:
                         x.write(word+'\n')
 
             # Ask user if they want to enter another file
-            if input("Would you like to enter another txt file? Y/N:\n").lower() == 'n':
+            if input("\nWould you like to enter another txt file? Y/N:").lower() == 'n':
                 print("So long!")
                 break   # Break out of the loop and exit the program
         else:   # File name entered did not exist in directory/location sortLenAlph.py does
