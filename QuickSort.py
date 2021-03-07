@@ -1,3 +1,10 @@
+# Initially, I thought about sorting the list manually via quicksort
+# Once for length, and again for alphabetical
+# However, I found out python can do both of those things natively, and quite easily.
+
+# !!!Currently does not work!!!
+# May return and fix later, not needed for main python file.
+
 
 # Quicksort method
 def qSort(words, low, high, isLength):
