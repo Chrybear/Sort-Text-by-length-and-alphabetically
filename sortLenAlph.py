@@ -6,22 +6,18 @@
 import os.path
 
 
-# Method to read textfile and sort
+# Method to sort text file
 def sortText(filename):
-    # Before we open the text file, we must first make sure it exists
-    if os.path.isfile(filename):
-        # Get the words as a list
-        text = getWords(filename)
-        # Sort the text alphabetically
-        text.sort()
-        # Sort the text by length in ascending order
-        text.sort(key=len, reverse=False)
-        return text     # Return the sorted text list
-    else:
-        return "Error: no file named '"+filename+"'. Please make sure it exists and/or is spelt correctly"
+    # Get the words as a list
+    text = getWords(filename)
+    # Sort the text alphabetically
+    text.sort()
+    # Sort the text by length in ascending order
+    text.sort(key=len, reverse=False)
+    return text     # Return the sorted text list
 
 
-# Method to turn textfile into a list of words
+# Method to turn text file into a list of words
 def getWords(filename):
     text = []   # Placeholder list to hold the words from the text file
     # Open the text file to be sorted
@@ -33,12 +29,26 @@ def getWords(filename):
 
 
 def main():
-    # Enter filename of text we wish to sort
-    filename = "Sort Me.txt"
-    # Get the file sorted
-    text = sortText(filename)
-    # Print out the newly sorted list of words
-    print(text)
+    # Loop while user gives inputs
+    while True:
+        # Get user input file name. Program only designed for .txt files, so must be strict with the file type
+        uInput = input("Please enter the filename of the txt file you wish to be sorted *Exclude file extension*:\n")
+        # Check if file exists
+        if os.path.isfile(uInput+'.txt'):
+            text = sortText(uInput+'.txt')  # Send file to be sorted
+            print(text)  # Print out the sorted file
+
+            if input("Would you like to save the sorted file? Y/N").lower() == 'y':
+                with open(uInput+'_sorted.txt', 'w') as x:
+                    for word in text:
+                        x.write(word+'\n')
+
+            # Ask user if they want to enter another file
+            if input("Would you like to enter another txt file? Y/N:\n").lower() == 'n':
+                print("So long!")
+                break   # Break out of the loop and exit the program
+        else:   # File name entered did not exist in directory/location sortLenAlph.py does
+            print("Error: no file named '"+uInput+".txt'. Please make sure it exists and/or is spelt correctly\n")
 
 
 if __name__ == '__main__':
