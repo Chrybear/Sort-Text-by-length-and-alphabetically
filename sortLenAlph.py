@@ -1,7 +1,7 @@
 # Author: Charles Ryan Barrett
 # Date: 3/7/2021
 # Description: A simple python program that takes in a text files of names/words and sorts them alphabetically
-# and by length
+# and by length. It also gives the option to save the sorted words into a new text file.
 
 import os.path
 
