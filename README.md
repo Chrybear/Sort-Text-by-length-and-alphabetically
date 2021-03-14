@@ -17,7 +17,7 @@ The program will then ask if you wish to enter another filename to be sorted.
 If you select yes, the process will start over. If you select no, the program will close.  
 
 **Instructions for branch 'Reverse-Order':**  
->Copy this git repository to your personal computer.  
+>Clone this git repository to your personal computer using the command 'git clone https://github.com/Chrybear/Sort-Text-by-length-and-alphabetically'.  
 Once downloaded, run the command 'git checkout Reverse-Order'.  
 You will not be on the branch that has the functionality to do descending sort order.  
 This program has only been tested with ".txt" files. Please put the txt files you wish to have sorted in the same folder/location you saved sortLenAlph.py.     
