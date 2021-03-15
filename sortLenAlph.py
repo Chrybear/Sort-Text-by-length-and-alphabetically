@@ -4,6 +4,7 @@
 # and by length. With the option of sorting in either ascending or descending order.
 # It also gives the option to save the sorted words into a new text file.
 
+
 import os.path
 
 
@@ -36,6 +37,16 @@ def getWords(filename):
             text.append(word.strip())   # Remove any spaces or new line tags
     return text     # return the words as a list
 
+
+def main():
+    # Loop while user gives inputs
+    while True:
+        # Get user input file name. Program only designed for .txt files, so must be strict with the file type
+        uInput = input("\nPlease enter the filename of the txt file you wish to be sorted *Exclude file extension*:")
+        # Check if file exists
+        if os.path.isfile(uInput+'.txt'):
+            text = sortText(uInput+'.txt')  # Send file to be sorted
+            print(text)  # Print out the sorted file
 
 def main():
     # Loop while user gives inputs

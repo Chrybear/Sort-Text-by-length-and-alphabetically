@@ -17,7 +17,6 @@ If you select yes, the program will save the new sorted file as "'name you enter
 The program will then ask if you wish to enter another filename to be sorted.  
 If you select yes, the process will start over. If you select no, the program will close.   
 
-
 **Test data:** 
 >There are two pre-made txt files in the repository for you to test with. "Sort Me.txt" and "pokemon.txt".  
 Put those two txt files into the same location as you did sortLenAlph.py prior to running the program.  
