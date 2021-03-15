@@ -3,6 +3,7 @@ Homework 1 for CSC 499 at EKU
 Sorts a textfile of words by their length and alphabetically.
 
 **Instructions:**  
+
 >Download or clone this repository.    
 Put the files into your desired folder/location.  
 This program has only been tested with ".txt" files. Please put the txt files you wish to have sorted in the same folder/location you saved sortLenAlph.py.     

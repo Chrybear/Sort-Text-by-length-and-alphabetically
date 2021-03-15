@@ -8,21 +8,13 @@ import os.path
 
 
 # Method to sort text file
-def sortText(filename, ascending=True):
+def sortText(filename):
     # Get the words as a list
     text = getWords(filename)
-
-    # Are we sorting in ascending or descending order?
-    if ascending:
-        # Sort the text alphabetically in ascending order
-        text.sort()
-        # Sort the text by length in ascending order
-        text.sort(key=len, reverse=False)
-    else:
-        # Sort the text alphabetically in descending order
-        text.sort(reverse=True)
-        # Sort the text by length in descending order
-        text.sort(key=len, reverse=True)
+    # Sort the text alphabetically
+    text.sort()
+    # Sort the text by length in ascending order
+    text.sort(key=len, reverse=False)
     return text     # Return the sorted text list
 
 
@@ -41,23 +33,10 @@ def main():
     # Loop while user gives inputs
     while True:
         # Get user input file name. Program only designed for .txt files, so must be strict with the file type
-        uInput = input("\nPlease enter the filename of the txt file you wish to be sorted:")
+        uInput = input("\nPlease enter the filename of the txt file you wish to be sorted *Exclude file extension*:")
         # Check if file exists
         if os.path.isfile(uInput+'.txt'):
-            # Check what order user wants the list sorted by
-            ascending = True
-            while True:
-                sortingOrder = input("\nWhat order do you want it sorted in?\nA:Ascending\nD:Descending\n").lower()
-                if sortingOrder == 'a':
-                    ascending = True
-                    break
-                elif sortingOrder == 'd':
-                    ascending = False
-                    break
-                else:
-                    print('Invalid command. Please enter either A or D.')
-
-            text = sortText(uInput+'.txt', ascending)  # Send file to be sorted
+            text = sortText(uInput+'.txt')  # Send file to be sorted
             print(text)  # Print out the sorted file
 
             if input("\nWould you like to save the sorted file? Y/N:").lower() == "y":
@@ -67,7 +46,8 @@ def main():
                 else:
                     extensionName = '_sorted_Descending.txt'
                 #   Save the sorted list into a new file
-                with open(uInput+extensionName, 'w') as x:
+            if input("\nWould you like to save the sorted file? Y/N:").lower() == 'y':
+                with open(uInput+'_sorted.txt', 'w') as x:
                     for word in text:
                         x.write(word+'\n')
 
@@ -75,10 +55,8 @@ def main():
             if input("\nWould you like to enter another txt file? Y/N:").lower() == 'n':
                 print("So long!")
                 break   # Break out of the loop and exit the program
-
         else:   # File name entered did not exist in directory/location sortLenAlph.py does
-            print("Error: no file named '"+uInput+".txt' found. Please make sure it exists and/or is spelt correctly.\n"
-                                                  "Please remember to also exclude any file extensions.\n")
+            print("Error: no file named '"+uInput+".txt'. Please make sure it exists and/or is spelt correctly\n")
 
 
 if __name__ == '__main__':
