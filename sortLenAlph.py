@@ -1,6 +1,6 @@
 # Author: Charles Ryan Barrett
 # Date: 3/14/2021
-# Description: A simple python program that takes in a text files of names/words and sorts them alphabetically
+# Description: A simple python program that takes in a text file of words and sorts them alphabetically
 # and by length. With the option of sorting in either ascending or descending order.
 # It also gives the option to save the sorted words into a new text file.
 
@@ -66,7 +66,7 @@ def main():
                     extensionName = '_sorted_Ascending.txt'
                 else:
                     extensionName = '_sorted_Descending.txt'
-
+                #   Save the sorted list into a new file
                 with open(uInput+extensionName, 'w') as x:
                     for word in text:
                         x.write(word+'\n')
