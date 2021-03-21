@@ -3,8 +3,6 @@
 # Description: File to test if sortLenAlph is sorting correctly
 
 import sortLenAlph
-# apparently, trying to import from main directory to a folder is infinitely more complicated than I initially thought
-# because of this, there is an extra sortLenAlph.py in the testing folder.
 import os.path
 import unittest
 
