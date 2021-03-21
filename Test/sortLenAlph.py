@@ -70,9 +70,9 @@ def main():
             if input("\nWould you like to save the sorted file? Y/N:").lower() == "y":
                 # Decide what the second half of the filename should be to reflect sorting order
                 if sortingOrder == "a":
-                    extensionName = '_Ascending'
+                    extensionName = ' Sorted_Ascending'
                 else:
-                    extensionName = '_Descending'
+                    extensionName = ' Sorted_Descending'
                 #   Save the sorted list into a new file
                 writeSorted(uInput, text, extensionName)
 
