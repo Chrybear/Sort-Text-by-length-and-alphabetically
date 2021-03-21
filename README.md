@@ -22,3 +22,10 @@ If you select yes, the process will start over. If you select no, the program wi
 >There are two pre-made txt files in the repository for you to test with. "Sort Me.txt" and "pokemon.txt".  
 Put those two txt files into the same location as you did sortLenAlph.py prior to running the program.  
 Then type in the aforementioned filenames when asked to enter a filename using the above instructions to get them back sorted.  
+
+**Unit Test:**
+>Within the 'Test' folder there is a file named 'sortLenAlphTest.py'  
+This file contains two unit tests that will check if the program is sorting in ascending and descending order correctly.    
+>To run these unit tests, download or clone the repository.    
+Then open the folder within your preferred python-compatible IDE and run the file 'sortLenAlphTest.py' that is within the 'Test' Folder.  
+***Note:*** make sure that the files 'ascendingTest.txt' and 'descendingTest.txt' are in the 'Test' folder and the file 'Sort Me.txt' is in the main folder before running the unit tests.  
