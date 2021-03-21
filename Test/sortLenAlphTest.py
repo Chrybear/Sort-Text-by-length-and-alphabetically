@@ -22,7 +22,8 @@ class sortedTesting(unittest.TestCase):
             self.assertEqual(ascendingTest, sortedAscending, "Sorting in Ascending order: FAIL")
         else:
             self.fail('Error: testing files not found. To run tests, the files (ascendingTest.txt) and '
-                      '(descendingTest.txt) and (Sort Me.txt) must be in the same folder as sortLenAlphTest.py')
+                      '(descendingTest.txt) must be in the same "Test" folder as sortLenAlphTest.py and (Sort Me.txt) '
+                      'must be in the main folder')
 
     # Test if text was sorted in descending order correctly
     def testDescending(self):
@@ -37,7 +38,8 @@ class sortedTesting(unittest.TestCase):
             self.assertEqual(descendingTest, sortedDescending, "Sorting in Descending order: FAIL")
         else:
             self.fail('Error: testing files not found. To run tests, the files (ascendingTest.txt) and '
-                      '(descendingTest.txt) and (Sort Me.txt) must be in the same folder as sortLenAlphTest.py')
+                      '(descendingTest.txt) must be in the same "Test" folder as sortLenAlphTest.py and (Sort Me.txt) '
+                      'must be in the main folder')
 
 
 
