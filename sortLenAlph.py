@@ -37,6 +37,13 @@ def getWords(filename):
     return text     # return the words as a list
 
 
+# Method to write the sorted words into a new txt file
+def writeSorted(filename, words, sortingType):
+    with open(filename+sortingType+'.txt', 'w') as x:
+        for word in words:
+            x.write(word+'\n')
+
+
 def main():
     # Loop while user gives inputs
     while True:
@@ -63,13 +70,11 @@ def main():
             if input("\nWould you like to save the sorted file? Y/N:").lower() == "y":
                 # Decide what the second half of the filename should be to reflect sorting order
                 if sortingOrder == "a":
-                    extensionName = '_sorted_Ascending.txt'
+                    extensionName = '_Ascending'
                 else:
-                    extensionName = '_sorted_Descending.txt'
+                    extensionName = '_Descending'
                 #   Save the sorted list into a new file
-                with open(uInput+extensionName, 'w') as x:
-                    for word in text:
-                        x.write(word+'\n')
+                writeSorted(uInput, text, extensionName)
 
             # Ask user if they want to enter another file
             if input("\nWould you like to enter another txt file? Y/N:").lower() == 'n':
