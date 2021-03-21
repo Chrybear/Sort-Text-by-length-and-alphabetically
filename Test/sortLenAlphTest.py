@@ -42,28 +42,3 @@ class sortedTesting(unittest.TestCase):
 
 
 
-# # Must first make sure the testing files exist and/or are in the right location
-# if os.path.isfile('sort me sorted A.txt') and os.path.isfile('sort me sorted D.txt'):
-#     # Get the sorted text files as an array to compare with
-#     sortedAscending = sortLenAlph.getWords('sort me sorted A.txt')
-#     sortedDescending = sortLenAlph.getWords('sort me sorted D.txt')
-#
-#     # Test for sorting in ascending order
-#     ascendingTest = sortLenAlph.sortText('Sort Me.txt', True)
-#
-#     # Check if the text was sorted correctly
-#     if ascendingTest == sortedAscending:
-#         print('Sorting in ascending order: PASS')
-#     else:
-#         print('Sorting in ascending order: FAIL')
-#
-#     # Test for for sorting in descending order
-#     descendingTest = sortLenAlph.sortText('Sort Me.txt', False)
-#
-#     if descendingTest == sortedDescending:
-#         print('Sorting in descending order: PASS')
-#     else:
-#         print('Sorting in descending order: FAIL')
-# else:
-#     print('Error: testing files not found. To run tests, the files (sort me sorted A.txt) and (sort me sorted D.txt)'
-#           'must be in the same folder as sortLenAlphTest.py')
