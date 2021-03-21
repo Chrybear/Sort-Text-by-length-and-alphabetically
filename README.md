@@ -1,5 +1,5 @@
 # Sort-Text-by-length-and-alphabetically
-Homework 1 for CSC 499 at EKU
+Homework for CSC 499 at EKU
 Sorts a textfile of words by their length and alphabetically.
 
 **Instructions:**  
