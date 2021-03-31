@@ -1,0 +1,6 @@
+cd Test
+
+language: python
+
+script:
+- python -m unittest tests.sortLenAlphTest
