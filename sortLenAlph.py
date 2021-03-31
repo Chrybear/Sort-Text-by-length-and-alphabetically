@@ -15,7 +15,7 @@ def sortText(filename, ascending=True):
     # Are we sorting in ascending or descending order?
     if ascending:
         # Sort the text alphabetically in ascending order
-        text.sort()
+        #text.sort()
         # Sort the text by length in ascending order
         text.sort(key=len, reverse=False)
     else:
